@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94959600-234b-434d-a682-c49234afb078" name="Changes" comment="завершение2" />
+    <list default="true" id="94959600-234b-434d-a682-c49234afb078" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,11 +20,11 @@
   }
 }]]></component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "feat"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <servers />
   </component>
@@ -41,6 +41,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="завершение2" />
-    <option name="LAST_COMMIT_MESSAGE" value="завершение2" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
