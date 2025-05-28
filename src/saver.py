@@ -117,7 +117,7 @@ def save_vacancies_to_db(conn, vacancies: List[Dict], employer_id: str) -> None:
                         vacancy['alternate_url'],
                     ),
                 )
-        conn.comm()
+        conn.commit()
         print(
             f"Сохранено {len(vacancies)} вакансий для работодателя '{employer_name}' в БД > 'vacancies'"
         )
