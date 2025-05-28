@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94959600-234b-434d-a682-c49234afb078" name="Changes" comment="корректировка 4">
-      <change beforePath="$PROJECT_DIR$/employer_id.text" beforeDir="false" afterPath="$PROJECT_DIR$/employer_id.text" afterDir="false" />
-    </list>
+    <list default="true" id="94959600-234b-434d-a682-c49234afb078" name="Changes" comment="корректировка 5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748410753824</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="корректировка 5">
+      <option name="closed" value="true" />
+      <created>1748411719641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748411719641</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +135,7 @@
     <MESSAGE value="корректировка 2" />
     <MESSAGE value="корректировка 3" />
     <MESSAGE value="корректировка 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="корректировка 4" />
+    <MESSAGE value="корректировка 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="корректировка 5" />
   </component>
 </project>
