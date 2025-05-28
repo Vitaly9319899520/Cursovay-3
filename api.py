@@ -13,7 +13,7 @@ class HeadHunterApi:
 
     def get_employer(self,employer_id:str) -> Optional[Dict]:
         """Получение данных о работодателе по его ID"""
-        url = f'{self.base_url}employer/{employer_id}'
+        url = f'{self.base_url}employers/{employer_id}'
         response = requests.get(url,headers=self.headers)
         response.raise_for_status()
         print(f'Получение данных о работодателе "{response.json()['name']}".')
@@ -29,8 +29,8 @@ class HeadHunterApi:
             params = {'employer_id': employer_id, 'page': page, 'per_page': 100}
 
             response = requests.get(
-                f'{self.base_url}vacancies',headers=self.headers,
-                params=params)
+                f'{self.base_url}vacancies',headers=self.headers,params=params
+            )
             response.raise_for_status()
             data = response.json()
             vacancies.extend(data['items'])

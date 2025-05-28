@@ -70,6 +70,7 @@ class DBManager:
         avg_salary = self.get_avg_salary()
         if avg_salary is None:
             return []
+
         with self.conn.cursor() as cur:
             cur.execute(
                 """
@@ -79,11 +80,14 @@ class DBManager:
                     vacancies.salary_from,
                     vacancies.salary_to,
                     vacancies.currency,
-                    vacancies_url AS vacancy_url
+                    vacancies.url AS vacancy_url
                 FROM vacancies
                 INNER JOIN employers ON vacancies.employer_id = employers.employer_id
                 WHERE
                     (COALESCE(vacancies.salary_from, vacancies.salary_to) +
+                    COALESCE(vacancies.salary_to, vacancies.salary_from)) / 2 ) > %s
+                ORDER BY
+                    ((COALESCE(vacancies.salary_from, vacancies.salary_to) +
                     COALESCE(vacancies.salary_to, vacancies.salary_from)) / 2 ) DESC
             """,
                 (avg_salary,),

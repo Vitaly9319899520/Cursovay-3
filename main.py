@@ -8,8 +8,6 @@ from api import HeadHunterApi
 from saver import create_database, save_employer_to_db, create_tables, save_vacancies_to_db
 
 
-
-
 def main() -> None:
     """Собираем данные о работодателях и вакансиях с HH.ru в юазу данных"""
     # Подключение к БД
@@ -36,7 +34,7 @@ def main() -> None:
     # connection.close()
 
     # Создание БД
-    create_database(db_params,db_name)
+    create_database(db_params, db_name)
     db_params['database'] = db_name
 
     # Подключение к БД и создание таблиц
@@ -45,17 +43,18 @@ def main() -> None:
 
     # Загрузка данных
     hh_api = HeadHunterApi()
-    with open('employer_id.text','r') as f:
+    with open('employer_id.text', 'r') as f:
         employer_id = [line.strip() for line in f]
 
         for employer in employer_id:
             emp = hh_api.get_employer(employer)
             if emp:
-                save_employer_to_db(conn,emp)
+                save_employer_to_db(conn, emp)
                 vacancies = hh_api.get_vacancies(employer)
-                save_vacancies_to_db(conn,vacancies,employer)
+                save_vacancies_to_db(conn, vacancies, employer)
 
         conn.close()
+
 
 def user_interaction() -> None:
     """Интерфейс взаимодействия с пользователем"""
@@ -80,7 +79,7 @@ def user_interaction() -> None:
     5. Поиск по ключевому слову
     6. Выход
             """
-            )
+        )
 
         value = input('> ').strip()
 
@@ -92,7 +91,7 @@ def user_interaction() -> None:
 
         elif value == '2':
             vacancies = db_manager.get_all_vacancies()
-            for company,title,salary_from, salary_to, currency, url in vacancies:
+            for company, title, salary_from, salary_to, currency, url in vacancies:
                 salary = ''
                 if salary_from or salary_to:
                     salary = f'Зарплата {salary_from or '-'} - {salary_to or '-'} {currency}'
@@ -122,7 +121,7 @@ def user_interaction() -> None:
         else:
             print('Неверный ввод. Попробуйте снова.')
 
+
 if __name__ == "__main__":
     main()
     user_interaction()
-
