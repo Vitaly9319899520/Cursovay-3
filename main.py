@@ -3,9 +3,9 @@ import os
 import psycopg2
 from dotenv import load_dotenv
 
-from db_manager import DBManager
-from api import HeadHunterApi
-from saver import create_database, save_employer_to_db, create_tables, save_vacancies_to_db
+from src.db_manager import DBManager
+from src.api import HeadHunterApi
+from src.saver import create_database, save_employer_to_db, create_tables, save_vacancies_to_db
 
 
 def main() -> None:
